@@ -16,8 +16,8 @@
 CREATE TABLE IF NOT EXISTS `settings` (
   `id` int NOT NULL AUTO_INCREMENT,
   `key` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `value` longtext COLLATE utf8mb4_general_ci,
-  `typeof` enum('string','number','float','json') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT 'string',
+  `value` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `typeof` enum('string','int','float','bool','json') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT 'string',
   `group` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `description` mediumtext COLLATE utf8mb4_general_ci,
   PRIMARY KEY (`id`),
